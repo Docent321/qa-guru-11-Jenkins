@@ -22,6 +22,7 @@ public class TestJenkinsGroup {
         String browserSize = System.getProperty("browserSize");
 
         Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = browserSize;  //"1920x1080"
         Configuration.remote = "https://" + user + ":" + password + "@selenoid.autotests.cloud/wd/hub";
 
